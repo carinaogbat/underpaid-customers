@@ -1,3 +1,21 @@
+
+from unicodedata import name
+
+
+customer_order = open("customer-orders.txt")
+ for line in customer_order:
+    line = line.strip()
+    order_info = customer_order.split("|")
+    customer_name = order_info[1]
+    melons_ordered = order_info[2]
+    price_paid = order_info[3]
+
+def over_or_underpaid(name, melons_ordered, price_paid):
+    if melons_ordered > price_paid:
+        print(f"{name} has overpaid.")
+    elif melons_ordered < price_paid:
+        print(f"{name} has underpaid.")
+
 melon_cost = 1.00
 
 customer1_name = "Joe"
