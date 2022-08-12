@@ -12,12 +12,13 @@ def over_or_underpaid(filename):
         melons_ordered = order_info[2]
         price_paid = order_info[3]
 
+    
 
-        if melons_ordered > price_paid:
+    if melons_ordered > price_paid:
             print(f"{customer_name} has overpaid.")
-        elif melons_ordered < price_paid:
+    elif melons_ordered < price_paid:
             print(f"{customer_name} has underpaid.")
-        else:
+    else:
             print("Customer has paid full amount.")
 
     customer_order.close()
